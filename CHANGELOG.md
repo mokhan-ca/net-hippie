@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.1] - 2026-02-01
+
+### Fixed
+
+- Fix load order to require version before client
+
 ## [1.5.0] - 2026-02-01
 
 ### Changed
@@ -123,7 +129,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - with\_retry.
 - authorization header helpers
 
-[Unreleased]: https://src.mokhan.ca/xlgmokha/net-hippie/compare/v1.5.0...HEAD
+[Unreleased]: https://src.mokhan.ca/xlgmokha/net-hippie/
+[1.5.1]: https://src.mokhan.ca/xlgmokha/net-hippie/compare/v1.5.0...v1.5.1
 [1.5.0]: https://src.mokhan.ca/xlgmokha/net-hippie/compare/v1.4.0...v1.5.0
 [1.4.0]: https://src.mokhan.ca/xlgmokha/net-hippie/compare/v1.3.0...v1.4.0
 [1.3.0]: https://src.mokhan.ca/xlgmokha/net-hippie/compare/v1.2.0...v1.3.0
