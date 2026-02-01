@@ -1,5 +1,3 @@
-Version 1.3.0
-
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -7,6 +5,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.5.0] - 2026-02-01
+
+### Changed
+
+- Prefer IPv4 addresses in DNS resolution to avoid connectivity issues
+- Increase default `keep_alive_timeout` to 30 seconds for better connection reuse
+- Set TLS `min_version` to TLS 1.2 by default for improved security
+- Improve retry logging format with structured error details
+
+### Added
+
+- Add thread-safe connection pooling with LRU eviction
+- Add DNS pre-resolution with configurable timeout to prevent indefinite hangs
+- Add DNS caching with TTL support
+- Add persistent HTTP sessions to avoid `Connection: close` overhead
+- Add `head` and `options` HTTP methods
+- Add `close_all` method to release all pooled connections
+- Add `reset_default_client!` method to reset the default client
+- Add configuration options: `keep_alive_timeout`, `max_retries`, `min_version`, `continue_timeout`, `ignore_eof`, `max_connections`, `dns_timeout`, `dns_ttl`
+- Parse TLS certificates once at initialization for performance
+
+### Fixed
+
+- Fix connection leak when racing threads create duplicate connections
 
 ## [1.4.0] - 2025-10-08
 ### Added
@@ -100,7 +123,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - with\_retry.
 - authorization header helpers
 
-[Unreleased]: https://github.com/xlgmokha/net-hippie/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/xlgmokha/net-hippie/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/xlgmokha/net-hippie/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/xlgmokha/net-hippie/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/xlgmokha/net-hippie/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/xlgmokha/net-hippie/compare/v1.1.1...v1.2.0
