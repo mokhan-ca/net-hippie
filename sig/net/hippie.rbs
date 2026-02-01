@@ -1,0 +1,29 @@
+module Net
+  module Hippie
+    VERSION: String
+
+    CONNECTION_ERRORS: Array[Class]
+
+    def self.logger: () -> untyped
+    def self.logger=: (untyped) -> untyped
+
+    def self.verify_mode: () -> Integer
+    def self.verify_mode=: (Integer) -> Integer
+
+    def self.basic_auth: (String username, String password) -> String
+    def self.bearer_auth: (String token) -> String
+
+    def self.default_client: () -> Client
+    def self.reset_default_client!: () -> nil
+
+    def self.resolve: (String hostname, ?timeout: Integer) -> String?
+
+    def self.get: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+    def self.post: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+    def self.put: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+    def self.patch: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+    def self.delete: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+    def self.head: (untyped uri, ?headers: Hash[String, String]) ?{ (untyped) -> void } -> untyped
+    def self.options: (untyped uri, ?headers: Hash[String, String]) ?{ (untyped) -> void } -> untyped
+  end
+end

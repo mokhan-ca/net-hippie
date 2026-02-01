@@ -1,0 +1,25 @@
+module Net
+  module Hippie
+    class Client
+      DEFAULT_HEADERS: Hash[String, String]
+
+      attr_reader mapper: ContentTypeMapper
+      attr_reader logger: untyped
+      attr_reader follow_redirects: Integer
+
+      def initialize: (?Hash[Symbol, untyped] options) -> void
+
+      def get: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def post: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def put: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def patch: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def delete: (untyped uri, ?headers: Hash[String, String], ?body: untyped, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def head: (untyped uri, ?headers: Hash[String, String]) ?{ (untyped) -> void } -> untyped
+      def options: (untyped uri, ?headers: Hash[String, String]) ?{ (untyped) -> void } -> untyped
+
+      def execute: (untyped uri, untyped request, ?limit: Integer, ?stream: bool) ?{ (untyped) -> void } -> untyped
+      def with_retry: (?retries: Integer) { (Client) -> untyped } -> untyped
+      def close_all: () -> void
+    end
+  end
+end

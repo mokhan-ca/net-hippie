@@ -1,0 +1,7 @@
+module Net
+  module Hippie
+    class ContentTypeMapper
+      def map_from: (Hash[String, String] headers, (Hash[untyped, untyped] | String) body) -> (String | Hash[untyped, untyped])
+    end
+  end
+end
