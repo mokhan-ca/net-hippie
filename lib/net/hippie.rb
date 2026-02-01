@@ -9,11 +9,11 @@ require 'openssl'
 require 'resolv'
 require 'timeout'
 
+require 'net/hippie/version'
 require 'net/hippie/client'
 require 'net/hippie/connection'
 require 'net/hippie/connection_pool'
 require 'net/hippie/content_type_mapper'
-require 'net/hippie/version'
 
 module Net
   # High-performance HTTP client with connection pooling and DNS caching.
