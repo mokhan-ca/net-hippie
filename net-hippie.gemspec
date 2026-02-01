@@ -7,17 +7,18 @@ require 'net/hippie/version'
 Gem::Specification.new do |spec|
   spec.name          = 'net-hippie'
   spec.version       = Net::Hippie::VERSION
-  spec.authors       = ['mo']
+  spec.authors       = ['mo khan']
   spec.email         = ['mo@mokhan.ca']
 
   spec.summary       = 'net/http for hippies. ☮️ '
   spec.description   = 'net/http for hippies. ☮️ '
-  spec.homepage      = 'https://rubygems.org/gems/net-hippie'
+  spec.homepage      = "https://src.mokhan.ca/xlgmokha/net-hippie"
   spec.license       = 'MIT'
-  spec.metadata      = {
-    'source_code_uri' => 'https://github.com/xlgmokha/net-hippie',
-    'rubygems_mfa_required' => 'true'
-  }
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://git.mokhan.ca/xlgmokha/net-hippie.git"
+  spec.metadata["changelog_uri"] = "https://src.mokhan.ca/xlgmokha/net-hippie/blob/main/CHANGELOG.md.html"
+
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
