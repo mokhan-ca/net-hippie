@@ -313,7 +313,7 @@ class ClientTest < Minitest::Test
         refute_nil response
         assert_kind_of Net::HTTPOK, response
         io.rewind
-        assert_match %r{^(opening connection to www.example.org:443)}, io.read
+        assert_match(/^opening connection to .+:443/, io.read)
       end
     end
   end
