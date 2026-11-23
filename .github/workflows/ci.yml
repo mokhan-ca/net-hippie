@@ -1,0 +1,34 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+permissions: {}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@be3c7df29b3349ec6bcfc6b4792f1cf9f5237d18
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+      - run: sh bin/test
+  style:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@be3c7df29b3349ec6bcfc6b4792f1cf9f5237d18
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+      - run: sh bin/style
