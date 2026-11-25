@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.2](https://github.com/mokhan-ca/net-hippie/compare/v1.5.1...v1.5.2) (2026-11-25)
+
+
+### Bug Fixes
+
+* link the gem to its repository and changelog ([62831c4](https://github.com/mokhan-ca/net-hippie/commit/62831c4d27eadf8a56a8d0b86d3fcdd016a78e71))
+
 ## [1.5.1] - 2026-02-01
 
 ### Fixed
