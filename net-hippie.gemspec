@@ -12,12 +12,11 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'net/http for hippies. ☮️ '
   spec.description   = 'net/http for hippies. ☮️ '
-  spec.homepage      = 'https://src.mokhan.ca/xlgmokha/net-hippie'
+  spec.homepage      = 'https://github.com/mokhan-ca/net-hippie'
   spec.license       = 'MIT'
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
-  spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://git.mokhan.ca/xlgmokha/net-hippie.git'
-  spec.metadata['changelog_uri'] = 'https://src.mokhan.ca/xlgmokha/net-hippie/blob/main/CHANGELOG.md.html'
+  spec.metadata['source_code_uri'] = spec.homepage
+  spec.metadata['changelog_uri'] = "#{spec.homepage}/blob/main/CHANGELOG.md"
   spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
